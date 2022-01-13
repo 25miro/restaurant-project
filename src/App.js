@@ -1,9 +1,20 @@
 import './App.css';
+import Cart from './Components/Cart';
+import Header from './Components/Header'
+import Main from './Components/Main';
 
 function App() {
   return (
     <div className="App">
-      Restaurant Project - Miro 2022
+        <Header />
+      <div>
+        <Main />
+        <Cart />
+      </div>
+      
+
+
+      
     </div>
   );
 }
