@@ -1,38 +1,358 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap:nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: flex-start;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.row-menu{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-1{
+  flex:1;
 }
+
+.col-2{
+  flex: 2;
+}
+
+.block{
+  padding: 1 rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.row.center{
+  align-items: center;
+}
+
+
+img.small{
+  max-height: 8rem;
+}
+
+button{
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  margin: 0.1rem;
+  border-radius:0.5rem;
+  background-color: #f0c040;
+  width: 100%;
+  cursor: pointer;
+}
+
+button.add{
+  background-color: #40c0f0;
+  width: 1.5rem;
+}
+
+button.remove{
+  background-color: #f04040;
+  width: 1.5rem;
+}
+button.badge{
+  background-color: #f04040;
+  border: none;
+  color: #fff;
+  width: 1.5rem;
+}
+
+.text-right{
+  text-align: right;
+}
+
+
+
+
+
+
+header{
+  background: rgb(31,64,55);
+  background: linear-gradient(45deg, rgba(31,64,55,1) 0%, rgba(54,186,171,1) 100%);
+  width: 100%;
+  height: 100px;
+  margin-left: 50px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  flex-basis: auto;
+}
+
+.menuSelected{
+  display: flex;
+  width: 30%;
+  height: 50px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 3px solid #1f4037;
+
+}
+
+.menuscard {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+.menuscard > li {
+  margin: 0 0 1em;
+  padding: 1em;
+  border: 1px solid silver;
+}
+.selected {
+  background: #ddd;
+}
+
+.menu{
+    display: flex;
+    justify-content:space-between;
+}
+
+.title{
+    display: flex;
+    color:white;
+    padding: 28px;
+}
+  
+nav {
+    padding: 20px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ul, li{
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .filterBook{
+    display: flex;
+    background-color: bisque;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .filterBook input {
+    margin-right: 50px;
+  }
+  
+  section.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+  }
+  
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    border: 1px solid gray;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h1 {text-align: center;}
+  
+  
+  section.acrescentar{
+    background-color: darkgrey;
+  
+   
+  }
+
+  section.acrescentar form {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  }
+
+  .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .navMenu{
+    background-color:#36baab;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 50px 50px;
+    margin-bottom: 20px;
+    border: 3px solid #1f4037;
+    border-radius: 10px;
+  }
+
+  .navMenuTitle{
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  .navMenuTitle a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .navMenuCart{
+    color: white;
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .navMenuCart a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .container{
+    width: 90%;
+    margin: auto;
+  }
+
+  .container h2, p{
+    text-align: center;
+  }
+
+  .card_image_dish img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+
+
+
+  .btn {
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    color: black;
+    padding: 0.5rem;
+    text-transform: lowercase;
+  }
+  
+  .btn--block {
+    display: block;
+    width: 100%;
+  }
+   
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards__item {
+    display: flex;
+    padding: 1rem;
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+      width: 33.3333%;
+    }
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    }
+  
+  .card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .card__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    filter: contrast(70%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+  }
+  
+  .card__title {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .card__text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .text_shipping{
+    font-size: 10px;
+  }

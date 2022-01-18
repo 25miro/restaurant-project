@@ -1,0 +1,165 @@
+{
+   "meals": [
+   {
+      "id":0,
+      "category":"Saladas",
+      "title":"Salada Mediterrânica",
+      "imageUrl":"salada-mediterranica.jpg",
+      "imageUrlGr":"salada-mediterranica-big.png",
+      "description":"Salada Mediterrânica com... "
+   },
+   {
+      "id":1,
+      "category":"Saladas",
+      "title":"Salada de Feijão",
+      "imageUrl":"salada-feijao.jpg",
+      "imageUrlGr":"salada-feijao-big.png",
+      "description":"Salada de Feijão com... "
+   },
+   {
+      "id":2,
+      "category":"Saladas",
+      "title":"Salada de Legumes",
+      "imageUrl":"salada-legumes.jpg",
+      "imageUrlGr":"salada-legumes-big.png",
+      "description":"Salada de Legumes com... "
+   },
+   {
+      "id":3,
+      "category":"Saladas",
+      "title":"Salada de Macarrão",
+      "imageUrl":"salada-macarrao.jpg",
+      "imageUrlGr":"salada-macarrao-big.png",
+      "description":"Salada de Macarrão com... "
+   },
+   {
+      "id":4,
+      "category":"Sopas",
+      "title":"Sopa de Legumes",
+      "imageUrl":"sopa-legumes.jpg",
+      "imageUrlGr":"sopa-legumes-big.png",
+      "description":"Sopa de Legumes com ... "
+   },
+   {
+      "id":5,
+      "category":"Sopas",
+      "title":"Sopa Juliana",
+      "imageUrl":"sopa-juliana.jpg",
+      "imageUrlGr":"sopa-juliana-big.png",
+      "description":"Sopa Juliana ... "
+   },
+   {
+      "id":6,
+      "category":"Sopas",
+      "title":"Sopa de Frango",
+      "imageUrl":"sopa-frango.jpg",
+      "imageUrlGr":"sopa-frango-big.png",
+      "description":"Sopa de Frango com ... "
+   },
+   {
+      "id":7,
+      "category":"Sopas",
+      "title":"Caldo Verde",
+      "imageUrl":"sopa-caldo-verde.jpg",
+      "imageUrlGr":"sopa-caldo-verde-big.png",
+      "description":"Caldo Verde "
+   },
+   {
+      "id":8,
+      "category":"Carnes",
+      "title":"Posta à Mirandesa",
+      "imageUrl":"posta-mirandesa.jpg",
+      "imageUrlGr":"posta-mirandesa-big.png",
+      "description":"Posta à Mirandesa "
+   },
+   {
+      "id":9,
+      "category":"Carnes",
+      "title":"Entrecosto Grelhado",
+      "imageUrl":"entrecosto-grelhado.jpg",
+      "imageUrlGr":"entrecosto-grelhado-big.png",
+      "description":"Entrecosto Grelhado"
+   },
+   {
+      "id":10,
+      "category":"Carnes",
+      "title":"Bife com Batata Frita",
+      "imageUrl":"bife-com-batata-frita.jpg",
+      "imageUrlGr":"bife-com-batata-frita-big.png",
+      "description":"Bife com Batata Frita"
+   },
+   {
+      "id":11,
+      "category":"Carnes",
+      "title":"Tomahawk",
+      "imageUrl":"tomahawk.jpg",
+      "imageUrlGr":"tomahawk-big.png",
+      "description":"Tomahawk"
+   },
+   {
+      "id":12,
+      "category":"Peixes",
+      "title":"Bacalhau com Broa",
+      "imageUrl":"bacalhau-com-broa.jpg",
+      "imageUrlGr":"bacalhau-com-broa-big.png",
+      "description":"Bacalhau com Broa "
+   },
+   {
+      "id":13,
+      "category":"Peixes",
+      "title":"Salmão Grelhado na Brasa",
+      "imageUrl":"salmao-grelhado-na-brasa.jpg",
+      "imageUrlGr":"salmao-grelhado-na-brasa-big.png",
+      "description":"Salmão Grelhado na Brasa"
+   },
+   {
+      "id":14,
+      "category":"Peixes",
+      "title":"Arroz de Tamboril",
+      "imageUrl":"arroz-de-tamboril.jpg",
+      "imageUrlGr":"arroz-de-tamboril-big.png",
+      "description":"Arroz de Tamboril"
+   },
+   {
+      "id":15,
+      "category":"Peixes",
+      "title":"Carapau Assado no Forno de Lenha",
+      "imageUrl":"carapau-assado-no-forno-de-lenha.jpg",
+      "imageUrlGr":"carapau-assado-no-forno-de-lenha-big.png",
+      "description":"Carapau Assado no Forno de Lenha"
+   },
+   {
+      "id":16,
+      "category":"Sobremesas",
+      "title":"Mousse de Chocolate",
+      "imageUrl":"mousse-de-chocolate.jpg",
+      "imageUrlGr":"mousse-de-chocolate-big.png",
+      "description":"Mousse de Chocolate"
+   },
+   {
+      "id":17,
+      "category":"Sobremesas",
+      "title":"Tiramisú",
+      "imageUrl":"tiramisu.jpg",
+      "imageUrlGr":"tiramisu-big.png",
+      "description":"Tiramisú"
+   },
+   {
+      "id":18,
+      "category":"Sobremesas",
+      "title":"Tarte de Frutos Vermelhos",
+      "imageUrl":"tarte-de-frutos-vermelhos.jpg",
+      "imageUrlGr":"tarte-de-frutos-vermelhos-big.png",
+      "description":"Tarte de Frutos Vermelhos"
+   },
+   {
+      "id":19,
+      "category":"Sobremesas",
+      "title":"Bolo de Bolacha semifrio",
+      "imageUrl":"bolo-de-bolacha-semifrio.jpg",
+      "imageUrlGr":"bolo-de-bolacha-semifrio-big.png",
+      "description":"Bolo de Bolacha semifrio"
+   }
+]
+
+}
