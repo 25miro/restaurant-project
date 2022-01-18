@@ -52,7 +52,7 @@ export default function Cart(props) {
                 </div>
                 <hr />
                 <div className="row">
-                    <button onClick={() => alert('Abre Formulário para colocar os dados')}>
+                 <button onClick={() => alert('Abre Formulário para colocar os dados')}>
                         Encomendar e Pagar
                     </button>
                 </div>

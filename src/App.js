@@ -1,8 +1,10 @@
 import {useState, useEffect} from 'react';
 import './App.css';
 import Cart from './Components/Cart';
-import Header from './Components/Header'
+import Header from './Components/Header';
 import Main from './Components/Main';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Hero from './Components/Hero';
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
   //const {products} = data;
   const [cartItems, setcartItems] = useState([]);
   const categories = [...new Set(products.map( m => m.category))];
-  const menuInCategory = products.filter( m => m.category === category);//Variavel que chama o json e faz iteração por todos os elementos (chama os elementos 1 a 1)
+  const ItemInCategory = products.filter( m => m.category === category);//Variavel que chama o json e faz iteração por todos os elementos (chama os elementos 1 a 1)
 
 
   //Chamada do Json com os Dados
@@ -52,15 +54,27 @@ function App() {
   };
 
   return (
-    <div className="container">
-        <Header countCartItems={cartItems.length} />
-      <div className="row">
+    <>
+    <Router>
+      <Routes>
+      <Route path="/cart" exact element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>} />
+        
+      
+      </Routes>
+      </Router>
 
-        <Main onAdd={onAdd} products={products} />
-        <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>
+      <div className="container">
+      <Header className="container" countCartItems={cartItems.length} />
+      <Hero />
+        <div className="row">
+          <Main onAdd={onAdd} products={products} />
+
+          
+
+          <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>
+        </div>
       </div>
-
-    </div>
+      </>
   );
 }
 
