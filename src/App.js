@@ -68,9 +68,6 @@ function App() {
       <Hero />
         <div className="row">
           <Main onAdd={onAdd} products={products} />
-
-          
-
           <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>
         </div>
       </div>

@@ -23,8 +23,8 @@ export default function Main(props) {
         <>
 
             
-        <main className="block">
-            <h2>Listagem de Menus</h2>
+        <main className='container d-flex flex-wrap'>
+           <div><h2>Listagem de Menus</h2></div>
 
             <select className="menuSelected" value={category} onChange={changeCategory}>
                 {
@@ -32,15 +32,13 @@ export default function Main(props) {
                 }
             </select>
 
-            <section className="row">
-                <ul>
+            <section >
+                <ul className='container d-flex flex-wrap' >
                 {
                     itemInCategory.map( (item,i) => (
                     <>
-                        <li className='cards_item' key={i}>
-                          <div className='card' >
-                                <div className='card__content'>
-                                
+                        <li >    
+                             <div className='m-4 card' key={i}>  
                                     <div className='card-header py-3'><h4 className='my-0 fw-normal'>{item.name}</h4></div>
                                         <div className='card-body'><h2>{item.description}</h2></div>
                                             <div><img className="card-img-top" src={item.image} alt={item.name}/></div>
@@ -54,10 +52,8 @@ export default function Main(props) {
                                                 </svg> Adicionar
                                             </button>
                                 </div>
-
                             </div>
-
-                          </div>
+               
                         </li>
                   </>
                         
