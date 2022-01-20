@@ -1,21 +1,18 @@
 import {useState, useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Cart from './Components/Cart';
 import Header from './Components/Header';
 import Main from './Components/Main';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Hero from './Components/Hero';
+import Product from './Components/Product';
+import Footer from './Components/Footer';
+import PayContact from './Components/PayContact';
+
 
 function App() {
 
-
   const [products, setProducts] = useState([])
-  const [category, setCategory] = useState('Carnes');
-  //const {products} = data;
   const [cartItems, setcartItems] = useState([]);
-  const categories = [...new Set(products.map( m => m.category))];
-  const ItemInCategory = products.filter( m => m.category === category);//Variavel que chama o json e faz iteração por todos os elementos (chama os elementos 1 a 1)
-
 
   //Chamada do Json com os Dados
   useEffect(() => {
@@ -54,25 +51,30 @@ function App() {
   };
 
   return (
-    <>
+<>
     <Router>
-      <Routes>
-      <Route path="/cart" exact element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>} />
-        
-      
-      </Routes>
-      </Router>
 
-      <div className="container">
-      <Header className="container" countCartItems={cartItems.length} />
-      <Hero />
-        <div className="row">
-          <Main onAdd={onAdd} products={products} />
-          <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>
-        </div>
-      </div>
-      </>
+      <Header countCartItems={cartItems.length} />
+
+        <Routes>
+
+          <Route path="/" element={<Main onAdd={onAdd} products={products} />}></Route>
+          <Route path="/cart" element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
+          <Route path="/product" element={<Product onAdd={onAdd} cartItems={cartItems}/>}></Route>
+          <Route path="/payment" element={<PayContact />}></Route>
+
+
+        </Routes>
+
+      <Footer />    
+
+    </Router>
+
+      
+</>
+    
   );
 }
+
 
 export default App;

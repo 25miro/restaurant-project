@@ -10,6 +10,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 h2 {
@@ -57,48 +58,60 @@ img.small{
 
 
 .button-cart{
+  background-color: white;
+  color: black;
   font-size: 0.8rem;
   padding: 0.2rem;
   margin: 0.1rem;
+  margin-right: 5rem;
   border-radius:0.5rem;
-  background-color: #f0c040;
-  width: 100%;
+  width: 150px;
   cursor: pointer;
-}
-
-
-button.add{
-  background-color: #40c0f0;
-  width: 1.5rem;
-}
-
-button.remove{
-  background-color: #f04040;
-  width: 1.5rem;
 }
 
 .text-right{
   text-align: right;
 }
 
-
-
-
-
-
-header{
-  background: rgb(31,64,55);
-  background: linear-gradient(45deg, rgba(31,64,55,1) 0%, rgba(54,186,171,1) 100%);
-  width: 100%;
-  height: 100px;
-  margin-left: 50px;
+.block-main-list{
+  margin: 30px 30px;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
-  flex-basis: auto;
+.block-main-list h2{
+  font-size: 2rem;
+}
+
+.margin-btn{
+  margin-right: 2rem;
+}
+
+
+.header-top{
+  background: rgb(31,64,55);
+  background: linear-gradient(45deg, rgba(31,64,55,1) 0%, rgba(0,119,208,1) 100% );
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  border-bottom: 25px solid white;
+  padding-bottom: 100px;
+}
+
+.hero-top{
+  margin-top: 150px;
+}
+
+footer{
+  background: rgb(31,64,55);
+  background: linear-gradient(45deg, rgba(31,64,55,1) 0%, rgba(0,119,208,1) 100% );
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  bottom: 0;
+  border-top: 10px solid white;
+  color: white;
+  margin-top: 100px;
 }
 
 .menuSelected{
@@ -108,21 +121,16 @@ header{
   margin: auto;
   padding: 5px;
   border-radius: 10px;
-  margin-bottom: 20px;
   border: 3px solid #1f4037;
 
 }
 
-.menuscard {
-  margin: 1em 0;
-  padding: 0;
-  list-style: none;
+.price-label{
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-.menuscard > li {
-  margin: 0 0 1em;
-  padding: 1em;
-  border: 1px solid silver;
-}
+
 .selected {
   background: #ddd;
 }
@@ -146,7 +154,7 @@ nav {
   }
   
   ul, li{
-    padding: 0 20px;
+    padding: 0 5px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -157,31 +165,6 @@ nav {
     cursor: pointer;
   }
   
-  .filterBook{
-    display: flex;
-    background-color: bisque;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .filterBook input {
-    margin-right: 50px;
-  }
-  
-  section.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5px;
-  }
-  
-  article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    border: 1px solid gray;
-  }
   
   img {
     max-width: 100%;
@@ -191,51 +174,59 @@ nav {
     margin-left: -40px;
   }
 
-
   .card-item-img{
     width: 50px;
     height: 40px;
     float: left;
     margin-right:10px;
-  }
-  
-  h1 {text-align: center;}
-  
-  
-  section.acrescentar{
-    background-color: darkgrey;
-  
-   
+    object-fit: cover;
   }
 
-  section.acrescentar form {
-    min-height: 20vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  
-  }
-
-  .hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .navMenu{
-    background-color:#36baab;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    margin: 50px 50px;
-    margin-bottom: 20px;
-    border: 3px solid #1f4037;
+  .card-item-img-list{
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
   }
+
+  .card-item-img-list-big{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .description-card{
+    width: 300px;
+    height: 90px;
+    padding: 5px;
+    margin: 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .title-card{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    padding: 5px;
+  }
+
+  .margin-top-btn{
+    margin-top: 250px;
+  }
+
+  .show-cart{
+    cursor: pointer;
+    color: white;
+  } 
+
+  .show-cart:hover{
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    transition: 10ms;
+  } 
 
   .navMenuTitle{
     color: white;
@@ -251,19 +242,20 @@ nav {
   .navMenuCart{
     color: white;
     display: flex;
-    width: 160px;
+    width: 200px;
     flex-direction: column;
     align-content: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 20px;
+    margin-right: 50px;
   }
 
   .navMenuCart .showCart{
     display: flex;
     width: 100%;
-    justify-content: space-between;
     justify-items: center;
     padding: 10px;
+    margin-left: 10px;
   }
 
   .navMenuCart a{
@@ -283,35 +275,6 @@ nav {
     border: 1px solid #ddd;
     margin-bottom: 10px;
   }
-
-
-
-  .btn {
-    background-color: white;
-    border: 1px solid grey;
-    border-radius: 1rem;
-    color: black;
-    padding: 0.5rem;
-    text-transform: lowercase;
-  }
-  
-  .btn--block {
-    display: block;
-    width: 100%;
-  }
-   
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .cards__item {
-    display: flex;
-    padding: 1rem;
-  }
   
   .card {
     display: flex;
@@ -320,12 +283,13 @@ nav {
     background-color: white;
     border: 1px solid #cccccc;
     border-radius: 0.25rem;
-    box-sizing: border-box;
-    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 10px -14px rgba(0,0,0,0.25);
     padding: 5px;
     flex-direction: column;
-    width: 250px;
+    width: 320px;
     transition: all linear 200ms;
+    margin-bottom: 2rem;
+    text-decoration: none;
     }
 
     .card:hover{
@@ -334,41 +298,8 @@ nav {
       z-index: 1;
       box-shadow: 1px 1px 10px rgba(0,0,0,.3);
       cursor: pointer;
+      text-decoration: none;
     }
-  
-  .card__content {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  .card__image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    filter: contrast(70%);
-    overflow: hidden;
-    position: relative;
-    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
-  }
-  
-  .card__title {
-    color: black;
-    font-size: 1.25rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  
-  .card__text {
-    flex: 1 1 auto;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-  }
 
   .text_shipping{
     font-size: 10px;
