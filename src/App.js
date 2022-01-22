@@ -7,6 +7,8 @@ import Main from './Components/Main';
 import Product from './Components/Product';
 import Footer from './Components/Footer';
 import PayContact from './Components/PayContact';
+import SocialMediaLinks from './Components/SocialMediaLinks';
+import SearchItems from './Components/SearchItems';
 
 
 function App() {
@@ -60,8 +62,11 @@ function App() {
 
           <Route path="/" element={<Main onAdd={onAdd} products={products} />}></Route>
           <Route path="/cart" element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
-          <Route path="/product" element={<Product onAdd={onAdd} cartItems={cartItems}/>}></Route>
-          <Route path="/payment" element={<PayContact />}></Route>
+          <Route path="/product/:id" element={<Product onAdd={onAdd} products={products}/>}></Route>
+          <Route path="/payment" element={<PayContact onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
+          <Route path="/" element={() => <div>Home</div>} />
+          <Route path="/social" element={<SocialMediaLinks/>} />
+          <Route path="/" element={<SearchItems products={products}/>}></Route>
 
 
         </Routes>
