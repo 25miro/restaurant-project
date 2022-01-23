@@ -3,6 +3,7 @@ import Hero from './Hero';
 import { Link } from 'react-router-dom';
 import SocialMediaLinks from './SocialMediaLinks';
 import SearchItems from './SearchItems';
+import Modal from './Modal';
 
 export default function Main(props) {
 
@@ -30,13 +31,33 @@ export default function Main(props) {
         <main className="container">
            <div className='block-main-list'><h2>Listagem de Menus</h2></div>
 
+           <div className="column-md-12 d-flex justify-content-between mb-3">
+               
+                   {
+                       categories.map(c => 
+                       <>
+                        <div className="d-flex card" key={c.id}>
+                            <div className="mb-2" >
+                               
+                                        <div><img className="card-img-top card-item-img-list" src={categories[1].image} alt={categories[1].description}/></div>
+
+                            </div>
+                        {c}
+
+                        </div>
+                       </>          
+                                    )
+                   }
+
+           </div>
+
            <div className="input-group d-flex justify-content-center mb-5">
                     <div className="input-group-prepend">
                         <label className="input-group-text" htmlFor="inputGroupSelect01">Seleccione a Categoria: </label>
                     </div>
                     <select className="custom-select" id="inputGroupSelect01" value={category} onChange={changeCategory}>
                         {
-                        categories.map(c => <option key={c} >{c}</option>)
+                        categories.map(cat => <option key={cat} >{cat}</option>)
                         }
                     </select>
             </div>
@@ -47,7 +68,7 @@ export default function Main(props) {
                     itemInCategory.map( (item,i) => (
                     <>
                         <li key={item.id}>    
-                             <div className='card d-flex' key={item.id}>  
+                             <div className='card d-flex'>  
                                     <div><h4 className='my-0 fw-normal title-card p-3'>{item.name}</h4></div>
                                     
                                     <div><img className="card-img-top card-item-img-list" src={item.image} alt={item.description}/></div>
@@ -74,7 +95,7 @@ export default function Main(props) {
                 }
                 </ul>
             </section>
-            
+
         </main>
         </>
     )
