@@ -31,52 +31,44 @@ function App() {
   //Function to Add item to Cart, but if already exist, plus 1 to item in the cart 
   const onAdd = (product) =>{
     const exist = cartItems.find((x) => x.id === product.id);
-    if (exist){
-      setcartItems(
+     if (exist){
+       setcartItems(
         cartItems.map((x) => x.id === product.id ? {...exist, qty: exist.qty + 1} : x)
       )
-    }else{
-      setcartItems([...cartItems, {...product, qty: 1 }])
-    }
-  };
+     }else{
+       setcartItems([...cartItems, {...product, qty: 1 }])
+     }
+    };
 
   //Function to Remove quantity to item, but if only have 1 quantity, the item  disappear to cart  
   const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
-    if (exist.qty === 1){
+     if (exist.qty === 1){
       setcartItems(
         cartItems.filter((x) => x.id !== product.id )
       );
-    }else{
-      setcartItems(
+     }else{
+       setcartItems(
         cartItems.map((x) => x.id === product.id ? {...exist, qty: exist.qty - 1} : x)
-      )
-    }
-  };
+       )
+     }
+   };
 
   return (
 <>
     <Router>
-
       <Header countCartItems={cartItems.length} />
-
         <Routes>
-
           <Route path="/" element={<Main onAdd={onAdd} products={products} />}></Route>
           <Route path="/login" element={<Modal />}></Route>
           <Route path="/cart" element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
           <Route path="/product/:id" element={<Product onAdd={onAdd} products={products}/>}></Route>
           <Route path="/payment" element={<PayContact onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
-          <Route path="/social" element={<SocialMediaLinks/>} />
+          <Route element={<SocialMediaLinks/>} />
           <Route path="/" element={<SearchItems products={products}/>}></Route>
-
-
         </Routes>
-
       <Footer />    
-
     </Router>
-
       
 </>
     
