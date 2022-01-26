@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {InlineShareButtons} from 'sharethis-reactjs';
+import { InlineShareButtons } from 'sharethis-reactjs';
 
 
 export default function SocialMediaLinks() {
@@ -11,7 +11,6 @@ export default function SocialMediaLinks() {
     return (
     <>
             <InlineShareButtons />
-
 
         {/*
         <div className="d-flex justify-content-around">
