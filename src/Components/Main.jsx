@@ -11,14 +11,11 @@ export default function Main(props) {
     const categories = [...new Set(products.map( m => m.category))]; 
     const itemInCategory = products.filter( m => m.category === category);//Variavel que chama o json e faz iteração por todos os elementos (chama os elementos 1 a 1)
 
-
-    
     const changeCategory = ({target:{value}}) =>{
         //setGroup(e.target.value)
         setCategory(value);
         //setBookableIndex(0);
     }
-
 
     return (
         <>
@@ -27,32 +24,33 @@ export default function Main(props) {
             
         <main className="container">
            <div className='block-main-list'><h2>Listagem de Menus</h2></div>
+
            <div className="column-md-12 d-flex justify-content-between mb-3">
                 {
                  categories.map(c => 
                  <>
-                    <div className="d-flex card" key={c.id}>
-                        
-                        <div className="mb-2" >
-                            <div><img className="card-img-top card-item-img-list" src={categories[1].image} alt={categories[1].description}/></div>
-                        </div>
-                    {c}{/* Elemento que é carregado no browser, por cada categoria é gerado um card */}
+                    <div className="d-flex" key={c.id}>
+                        <button className='btn btn-primary btn-lg px-4 me-md-2 fw-bold' value={c} onClick={changeCategory}>
+                            {c}
+                        </button>{/* Elemento que é carregado no browser, por cada categoria é gerado um card */}
                     </div>
                  </>          
                     )
                 }
            </div>
 
+       {/* 
            <div className="input-group d-flex justify-content-center mb-5">
                 <div className="input-group-prepend">
                     <label className="input-group-text" htmlFor="inputGroupSelect01">Seleccione a Categoria: </label>
                 </div>
                 <select className="custom-select" id="inputGroupSelect01" value={category} onChange={changeCategory}>
                     {
-                        categories.map(cat => <option key={cat} >{cat}</option>)//* Elemento que é carregado no browser, por cada categoria é gerado um select */}
+                        categories.map(cat => <option key={cat} >{cat}</option>)//* Elemento que é carregado no browser, por cada categoria é gerado um select
                     }
                 </select>
             </div>
+       */}
 
             {/* Section que aloja todos os artigos que vão ser carregados consoate a categoria a que pertencem*/}        
             <section className='d-flex' >
@@ -84,7 +82,11 @@ export default function Main(props) {
                         
                     ) )
                 }
+
                 </ul>
+
+                
+                
             </section>
         </main>
         </>
