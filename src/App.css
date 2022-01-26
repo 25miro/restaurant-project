@@ -347,3 +347,7 @@ nav {
     text-decoration: none;
     color: gray;
   }
+
+  .form-control{
+    height: 7vh;
+  }
