@@ -16,7 +16,7 @@ export default function PayContact(props) {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
-      }); 
+      });
   };
 
     return (
@@ -31,33 +31,33 @@ export default function PayContact(props) {
                         <div className="form-row d-flex justify-content-between col-md-12 mb-3">
                             <div className="form-group col-md-5">
                                 <label htmlFor="inputName">Nome:</label>
-                                <input type="text" className="form-control" id="inputEmail4" name="name" placeholder="Nome:" />
+                                <input type="text" className="form-control" id="inputEmail4" name="name" placeholder="Nome:" required="required" />
                             </div>
                             <div className="form-group col-md-5">
                                 <label htmlFor="inputSurname">Sobrenome:</label>
-                                <input type="text" className="form-control" id="inputPassword4" name="surname" placeholder="Sobrenome:" />
+                                <input type="text" className="form-control" id="inputPassword4" name="surname" placeholder="Sobrenome:" required="required"/>
                             </div>
                         </div>
 
                         <div className="form-row d-flex justify-content-between col-md-12 mb-3">
                             <div className="form-group col-md-5">
                                 <label htmlFor="inputEmail">Email:</label>
-                                <input type="email" className="form-control" id="inputEmail4" name="email" placeholder="Email:" />
+                                <input type="email" className="form-control" id="inputEmail4" name="email" placeholder="Email:" required="required" />
                             </div>
                             <div className="form-group col-md-5">
                                 <label htmlFor="inputAddress">Morada:</label>
-                                <input type="text" className="form-control" id="inputAddress" name="street" placeholder="Morada:" />
+                                <input type="text" className="form-control" id="inputAddress" name="street" placeholder="Morada:" required="required" />
                             </div>
                         </div>
 
                         <div className="form-row d-flex justify-content-between col-md-12 mb-3">
                             <div className="form-group col-md-4">
                                 <label htmlFor="inputCity">Localidade:</label>
-                                <input type="text" className="form-control" id="inputCity" name="city" placeholder="Localidade:" />
+                                <input type="text" className="form-control" id="inputCity" name="city" placeholder="Localidade:" required="required" />
                             </div>
                             <div className="form-group col-md-4 mb-3">
                             <label htmlFor="inputState">Distrito</label>
-                            <select id="inputState" className="form-control" name="district">
+                            <select id="inputState" className="form-control" name="district" >
                                 <option value="0">Seleccione:</option>
                                 <option value="Aveiro">Aveiro</option>
                                 <option value="Beja">Beja</option>
@@ -81,7 +81,7 @@ export default function PayContact(props) {
                             </div>
                             <div className="form-group col-md-2 mb-3">
                                 <label htmlFor="inputZip">Código-Postal</label>
-                                <input type="text" className="form-control" name="zipcode" id="inputZip" />
+                                <input type="text" className="form-control" name="zipcode" id="inputZip" required="required" />
                             </div>
                         </div>
                             
@@ -135,7 +135,7 @@ export default function PayContact(props) {
                         </div>
 
                         <div className='row col-md-12 d-flex justify-content-around'>
-                            <input type="submit" className='btn btn-primary col-md-6 fw-bold mb-3' value="Finalizar Encomenda" />
+                            <input type="submit" onClick={() => {cartItems.length=[]}} className='btn btn-primary col-md-6 fw-bold mb-3' value="Finalizar Encomenda" />
                         </div>   
 
                         <div className="row col-md-12 d-flex justify-content-around">
