@@ -54,6 +54,8 @@ function App() {
      }
    };
 
+
+
   return (
 <>
     <Router>
@@ -63,7 +65,7 @@ function App() {
           <Route path="/login" element={<Modal />}></Route>
           <Route path="/cart" element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
           <Route path="/product/:id" element={<Product onAdd={onAdd} products={products}/>}></Route>
-          <Route path="/payment" element={<PayContact onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
+          <Route path="/payment" element={<PayContact onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} setcartItems={setcartItems}/>}></Route>
           <Route element={<SocialMediaLinks/>} />
           <Route path="/" element={<SearchItems products={products}/>}></Route>
         </Routes>
