@@ -10,6 +10,7 @@ import PayContact from './Components/PayContact';
 import SocialMediaLinks from './Components/SocialMediaLinks';
 import SearchItems from './Components/SearchItems';
 import Modal from './Components/Modal';
+import Contact from './Components/Contact';
 
 
 
@@ -68,6 +69,7 @@ function App() {
           <Route path="/payment" element={<PayContact onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} setcartItems={setcartItems}/>}></Route>
           <Route element={<SocialMediaLinks/>} />
           <Route path="/" element={<SearchItems products={products}/>}></Route>
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       <Footer />    
     </Router>
