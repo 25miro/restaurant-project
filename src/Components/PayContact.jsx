@@ -135,7 +135,7 @@ export default function PayContact(props) {
                         </div>
 
                         <div className='row col-md-12 d-flex justify-content-around'>
-                            <input type="submit" onClick={() => {cartItems.length=[]}} className='btn btn-primary col-md-6 fw-bold mb-3' value="Finalizar Encomenda" />
+                            <input type="submit" className='btn btn-primary col-md-6 fw-bold mb-3' value="Finalizar Encomenda" />
                         </div>   
 
                         <div className="row col-md-12 d-flex justify-content-around">
