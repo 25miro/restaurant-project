@@ -19,12 +19,9 @@ export default function Main(props) {
         //setBookableIndex(0);
     }
 
-    //const backgroundItemImage = [categories];
-    //console.log(backgroundItemImage);
-    //console.log(bgItemImage[0]);
-
-    const bgItemImage = products;
-    const bgImage = (c) =>{
+    const bgItemImage = products; //Variavel que passa a guardar os valores do Array [products]
+    const bgImage = (c) =>{       //Variavel que contem uma Arrow Function que: 1) Guarda noutra variavel a filtragem de cada tipo de categoria onde cada categoria é igual a "c" e 
+                                  //se o tamanho desta variavel for maior que uma "categoria", então devolve a imagem na posição 0 de cada categoria. 
         let imageItems = bgItemImage.filter(m => m.category === c);
            if(imageItems.length > 0)
            return imageItems[0].image;
@@ -35,7 +32,7 @@ export default function Main(props) {
     return (
         <>
         <SearchItems />
-        <Hero />
+        <Hero bgimage={bgImage} />
             
         <main className="container">
            <div className='block-main-list'><h2>Listagem de Menus</h2></div>
@@ -44,7 +41,6 @@ export default function Main(props) {
                 {
                  categories.map(c => 
                  <>
-                
                     <div className="d-flex justify-content-between card m-2" key={c.id}>
                         <img className="card-item-img-dashboard" src={bgImage(c)} alt={c.description} />
                         <button className="btn-item-list" value={c} onClick={changeCategory}> {c}</button>
@@ -56,21 +52,7 @@ export default function Main(props) {
            </div>
 
 
-        {/*
-            <div className="column-md-12 d-flex justify-content-between mb-3">
-                {
-                 categories.map(c => 
-                 <>
-                    <div className="d-flex" key={c.id}>
-                        <button className='btn btn-primary btn-lg px-4 me-md-2 fw-bold' value={c} onClick={changeCategory}>
-                            {c}
-                        </button>
-                    </div>
-                 </>          
-                    )
-                }
-           </div>
-
+        {/* - A mesma filtragem mas por select box
 
            <div className="input-group d-flex justify-content-center mb-5">
                 <div className="input-group-prepend">
