@@ -11,11 +11,26 @@ export default function Main(props) {
     const categories = [...new Set(products.map( m => m.category))]; 
     const itemInCategory = products.filter( m => m.category === category);//Variavel que chama o json e faz iteração por todos os elementos (chama os elementos 1 a 1)
 
+
+    
     const changeCategory = ({target:{value}}) =>{
         //setGroup(e.target.value)
         setCategory(value);
         //setBookableIndex(0);
     }
+
+    //const backgroundItemImage = [categories];
+    //console.log(backgroundItemImage);
+    //console.log(bgItemImage[0]);
+
+    const bgItemImage = products;
+    const bgImage = (c) =>{
+        let imageItems = bgItemImage.filter(m => m.category === c);
+           if(imageItems.length > 0)
+           return imageItems[0].image;
+    }
+    
+
 
     return (
         <>
@@ -25,21 +40,38 @@ export default function Main(props) {
         <main className="container">
            <div className='block-main-list'><h2>Listagem de Menus</h2></div>
 
-           <div className="column-md-12 d-flex justify-content-between mb-3">
+           <div className="column-md-12 d-flex justify-content-between mb-4">
                 {
                  categories.map(c => 
                  <>
-                    <div className="d-flex" key={c.id}>
-                        <button className='btn btn-primary btn-lg px-4 me-md-2 fw-bold' value={c} onClick={changeCategory}>
-                            {c}
-                        </button>{/* Elemento que é carregado no browser, por cada categoria é gerado um card */}
+                
+                    <div className="d-flex justify-content-between card m-2" key={c.id}>
+                        <img className="card-item-img-dashboard" src={bgImage(c)} alt={c.description} />
+                        <button className="btn-item-list" value={c} onClick={changeCategory}> {c}</button>
+                           
                     </div>
                  </>          
                     )
                 }
            </div>
 
-       {/* 
+
+        {/*
+            <div className="column-md-12 d-flex justify-content-between mb-3">
+                {
+                 categories.map(c => 
+                 <>
+                    <div className="d-flex" key={c.id}>
+                        <button className='btn btn-primary btn-lg px-4 me-md-2 fw-bold' value={c} onClick={changeCategory}>
+                            {c}
+                        </button>
+                    </div>
+                 </>          
+                    )
+                }
+           </div>
+
+
            <div className="input-group d-flex justify-content-center mb-5">
                 <div className="input-group-prepend">
                     <label className="input-group-text" htmlFor="inputGroupSelect01">Seleccione a Categoria: </label>
@@ -50,7 +82,7 @@ export default function Main(props) {
                     }
                 </select>
             </div>
-       */}
+        */}
 
             {/* Section que aloja todos os artigos que vão ser carregados consoate a categoria a que pertencem*/}        
             <section className='d-flex' >
@@ -85,8 +117,6 @@ export default function Main(props) {
 
                 </ul>
 
-                
-                
             </section>
         </main>
         </>
