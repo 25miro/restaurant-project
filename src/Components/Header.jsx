@@ -11,7 +11,7 @@ export default function Header(props) {
             <header className="header-top row-menu fixed-top">
                 <div className="navMenuTitle">
                     <Link to="/">
-                        <h1>Top Meals</h1>
+                        <h1>TopMeals</h1>
                     </Link>
                 </div>
 
