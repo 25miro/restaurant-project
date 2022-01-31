@@ -11,13 +11,14 @@ import SocialMediaLinks from './Components/SocialMediaLinks';
 import SearchItems from './Components/SearchItems';
 import Modal from './Components/Modal';
 import Contact from './Components/Contact';
+import ThanksPage from './Components/ThanksPage';
 
 
 
 function App() {
 
   const [products, setProducts] = useState([])
-  const [cartItems, setcartItems] = useState([]);
+  let [cartItems, setcartItems] = useState([]);
 
   //Chamada do Json com os Dados
   useEffect(() => {
@@ -55,6 +56,10 @@ function App() {
      }
    };
 
+   const clearCart = () => {
+    const exist = cartItems = [];
+      setcartItems(exist);
+   };
 
 
   return (
@@ -62,14 +67,15 @@ function App() {
     <Router>
       <Header countCartItems={cartItems.length} />
         <Routes>
-          <Route path="/" element={<Main onAdd={onAdd} products={products} />}></Route>
+          <Route path="/" element={<Main onAdd={onAdd} products={products} clearCart={clearCart} />}></Route>
           <Route path="/login" element={<Modal />}></Route>
-          <Route path="/cart" element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>}></Route>
+          <Route path="/cart" element={<Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} clearCart={clearCart}/>}></Route>
           <Route path="/product/:id" element={<Product onAdd={onAdd} products={products}/>}></Route>
-          <Route path="/payment" element={<PayContact onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} setcartItems={setcartItems}/>}></Route>
+          <Route path="/payment" element={<PayContact onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} setcartItems={setcartItems} clearCart={clearCart}/>}></Route>
           <Route element={<SocialMediaLinks/>} />
           <Route path="/" element={<SearchItems products={products}/>}></Route>
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thanks" element={<ThanksPage />} />
         </Routes>
       <Footer />    
     </Router>
