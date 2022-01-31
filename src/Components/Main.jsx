@@ -6,7 +6,7 @@ import SearchItems from './SearchItems';
 
 export default function Main(props) {
 
-    const {products, onAdd} = props; //Recebe via props os produtos e os atributos do mesmo, a a função de adicionar ao carrinho
+    const {products, onAdd, clearCart} = props; //Recebe via props os produtos e os atributos do mesmo, a a função de adicionar ao carrinho
     const [category, setCategory] = useState('Saladas');// Variavel de Estado para mudar o selected das Categorias
     const categories = [...new Set(products.map( m => m.category))]; 
     const itemInCategory = products.filter( m => m.category === category);//Variavel que chama o json e faz iteração por todos os elementos (chama os elementos 1 a 1)
@@ -98,8 +98,14 @@ export default function Main(props) {
                 }
 
                 </ul>
-
             </section>
+
+            <div className="row col-md-12 d-flex justify-content-center">
+                <button className='btn btn-danger col-md-3 fw-bold mb-3' onClick={clearCart}>
+                        Apagar Carrinho
+                </button>
+            </div>
+
         </main>
         </>
     )

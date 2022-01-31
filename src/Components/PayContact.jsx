@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 export default function PayContact(props) {
 
-  const {cartItems} = props;
+  const {cartItems, clearCart} = props;
   const form = useRef();
 
 //Função de Envio do Email da Encomenda//
@@ -134,9 +134,6 @@ export default function PayContact(props) {
                             </div>
                         </div>
 
-                        <div className='row col-md-12 d-flex justify-content-around'>
-                            <input type="submit" className='btn btn-primary col-md-6 fw-bold mb-3' value="Finalizar Encomenda" />
-                        </div>   
 
                         <div className="row col-md-12 d-flex justify-content-around">
                             <Link className="row col-md-6 d-flex justify-content-around" to={"/"}>    
@@ -144,7 +141,14 @@ export default function PayContact(props) {
                                         Continuar a Comprar
                                 </button>
                             </Link>
-                        </div>  
+
+                              
+                                <div className="row col-md-6 d-flex justify-content-around">
+                                    <input type="submit" onClick={clearCart} className='btn btn-primary col-md-6 fw-bold mb-3' value="Finalizar Encomenda"></input>
+                                </div>
+
+                        </div>
+
                     </form>
                 </div>     
             </div>

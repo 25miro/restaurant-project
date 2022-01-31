@@ -33,7 +33,8 @@ export default function Header(props) {
                             Carrinho: {countCartItems} {/* Mostra o número de artigos encomendados, não mostra quantidades totais*/}
                         </button> 
                     </Link>                                      
-                    ) 
+                        ) 
+                        
                     // : ('')
                   } 
                     <div className="showcart">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Cart(props) {
 
     //Recebe via props os Items do Carrinho, a Função Adicionar ou Remover Artigo ou Quantidade
-    const {cartItems, onAdd, onRemove} = props;
+    const {cartItems, onAdd, onRemove, clearCart} = props;
 
     //variavel que calcula o somatório do total de todos os artigos
     const itemsPrice = cartItems.reduce((a, c)=> a + c.price * c.qty, 0);
@@ -67,11 +67,18 @@ export default function Cart(props) {
                                         Continuar a Comprar
                                 </button>
                             </Link>
+                            
                             <Link className="row col-md-6 d-flex justify-content-around" to={"/payment"}>
                                 <button className='btn btn-primary col-md-6 fw-bold mb-3'>
                                         Encomendar e Pagar
                                 </button>
                             </Link>
+
+                            <div className="row col-md-6 d-flex justify-content-around">
+                                <button className='btn btn-danger col-md-6 fw-bold mb-3' onClick={clearCart}>
+                                        Apagar Carrinho
+                                </button>
+                            </div>
                         </div>
                </>
 
