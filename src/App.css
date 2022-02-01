@@ -375,7 +375,7 @@ nav {
   }
 
   .form-control{
-    height: 7vh;
+    height: 4vh;
   }
 
   .bg-hero{
@@ -385,6 +385,7 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.8;
   }
 
   .text-hero {
