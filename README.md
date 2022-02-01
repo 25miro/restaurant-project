@@ -1,10 +1,22 @@
 Online Restaurant to order Fresh Meals
 
-1 - Page with complete catalog of possible dishes, list of meals;
+1 - Main Page with complete catalog of possible dishes, list of meals separated by Category;
 
-- Search Field;
-- Visible shopping cart;
-- Dashboard with Menu Options.
+- Header
+   - Logo
+   - Search Field;
+   - Visible shopping cart;
+   - Login
+   - 
+- Main Page
+  - Hero Banner
+  - Section with Category Options;
+  - Dashboard with Products
+
+- Footer
+  - Skills
+  - Owner
+  
 
 2 - Product detail page with brief description of the dish and its ingredients.
 
@@ -14,12 +26,12 @@ Online Restaurant to order Fresh Meals
 
 3 - Order page with summary of items in the cart, total order, and data form to finalize the order; 
 
-- Validate address via Bing Maps API to calculate delivery price (It's a Bonus)
+- Validate address via Bing Maps API to calculate delivery price (It's a Bonus) - Undeveloped
 
-4 - Sending an Email to confirm order via API
+4 - Sending an Email to confirm order via npm Package (EmailJS)
 
 5 - Possibility of sharing the Dish (Preferred) on Social Media
 
-6 - Possibility of assigning evaluation to the ordered dish.
+6 - Possibility of assigning evaluation to the ordered dish. - Undeveloped
 
-7 - Dishes with two prices, normal and promo price (It´s a Bonus)
+7 - Dishes with two prices, normal and promo price (It´s a Bonus) - Undeveloped
