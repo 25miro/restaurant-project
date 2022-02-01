@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import {InlineShareButtons} from 'sharethis-reactjs';
+import { Link } from 'react-router-dom';
 
 export default function Product(props) {
 
@@ -27,12 +28,19 @@ export default function Product(props) {
                         </div>
                     </div> 
 
-                    <div className='d-grip gap-2 d-md-flex justify-content-center mb-4 mb-lg-3'>
+                    <div className='d-grip gap-2 d-md-flex justify-content-center mb-4 mb-lg-1'>
                         <button className='btn btn-primary btn-lg px-4 me-md-2 fw-bold' onClick={() => onAdd(products[id])}>Adicionar ao Carrinho</button> 
                     </div>  
+                    
                     <div className='d-grip gap-2 d-md-flex justify-content-center mb-4 mb-lg-3'>
                         <InlineShareButtons />  
                     </div> 
+
+                    <Link className="d-grip gap-2 d-md-flex justify-content-center mb-4 mb-lg-1" to={"/"}>    
+                        <button className='btn btn-secondary col-md-2 fw-bold mb-3'>
+                                Voltar
+                        </button>
+                    </Link>
                    
                 </div>
             }
