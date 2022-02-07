@@ -72,7 +72,7 @@ export default function Main(props) {
                 {
                     itemInCategory.map( (item,i) => (
                     <>
-                        <li key={item.id}>    
+                        <li key={i}>    
                              <div className='card d-flex'>  
                                 <div><h4 className='my-0 fw-normal title-card p-3'>{item.name}</h4></div>
                                 <div><img className="card-img-top card-item-img-list" src={item.image} alt={item.description}/></div>
