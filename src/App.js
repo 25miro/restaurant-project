@@ -20,7 +20,7 @@ function App() {
   const [products, setProducts] = useState([])
   let [cartItems, setcartItems] = useState([]);
 
-  //Chamada do Json com os Dados
+  //Calling json API
   useEffect(() => {
     fetch ('https://61ddf3cdf60e8f0017668b42.mockapi.io/api/Menu')
         //Recebe resposta de uma promise que dizemos que o json que vem é para transformar em formato javascript 
